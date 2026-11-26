@@ -27,7 +27,7 @@ pipeline {
             steps {
                 sh '''
                       mkdir -p /var/www/html/
-                      cp -r dist/. /var/www/html/react-app/
+                      cp -r dist/. /var/www/html/
                 '''
             }
         }

@@ -22,16 +22,6 @@ pipeline {
                 sh 'npm run build'
             }
         }
-
-        stage('Deploy to Local Nginx') {
-            steps {
-                sh '''
-                       mkdir -p /var/www/html/react-app
-                      cp -r dist/. /var/www/html/react-app/
-                '''
-            }
-        }
-
         stage('Deploy to Local Nginx') {
                 steps {
                     sh '''

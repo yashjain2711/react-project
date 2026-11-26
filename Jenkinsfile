@@ -25,17 +25,16 @@ pipeline {
         stage('Deploy to Local Nginx') {
                 steps {
                     sh '''
-                            echo "Deploying React application..."
-
-                            mkdir -p /var/www/html/react-app
-
                             cp -r dist/. /var/www/html/react-app/
 
                             echo "Deployment completed successfully!"
                     '''
-    }
-}
-        
+            }
+        }
+            
     }
 
 }
+
+
+

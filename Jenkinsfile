@@ -2,20 +2,12 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'NodeJS-20'
-    }
-
-    options {
-        timestamps()
-    }
-
     stages {
 
         stage('Checkout SCM') {
             steps {
                 checkout scm
-                echo 'Code successfully pulled from GitHub'
+          
             }
         }
 
@@ -41,14 +33,4 @@ pipeline {
         }
     }
 
-    post {
-        success {
-            echo 'Deployment successful!'
-            echo 'Open: http://localhost/react-app/'
-        }
-
-        failure {
-            echo 'Pipeline failed. Check Jenkins console output.'
-        }
-    }
 }

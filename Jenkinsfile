@@ -26,7 +26,7 @@ pipeline {
         stage('Deploy to Local Nginx') {
             steps {
                 sh '''
-                      mkdir -p /var/www/html/react-app
+                      mkdir -p /var/www/html/
                       cp -r dist/. /var/www/html/react-app/
                 '''
             }

@@ -25,7 +25,7 @@ pipeline {
         stage('Deploy to Local Nginx') {
                 steps {
                     sh '''
-                            cp -r dist/. /var/www/html/react-app/
+                            cp -r dist/. /home/yashjain/Desktop/project/jenkins/
 
                             echo "Deployment completed successfully!"
                     '''
